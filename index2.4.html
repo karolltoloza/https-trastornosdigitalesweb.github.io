@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprendiendo la Ansiedad</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #4682b4;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4682b4;
+            padding: 10px 0;
+        }
+        .main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .main-nav a:hover {
+            background-color: #3a6d8c;
+        }
+        .content {
+            padding: 20px;
+            background: #ffffff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4682b4;
+        }
+        .breathing-exercise {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #breathing-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #5f9ea0;
+            margin: 20px auto;
+            transition: transform 4s ease-in-out, background-color 4s ease-in-out;
+        }
+        footer {
+            background: #5f9ea0;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comprendiendo la Ansiedad</h1>
+    </header>
+    
+    <nav class="main-nav">
+        <a href="Index1.html">Inicio</a>
+        <a href="index2.1.html">Trastornos Alimenticios</a>
+        <a href="index2.2.html">Trastornos Bipolares</a>
+        <a href="index2.3.html">Déficit de Atención</a>
+        <a href="Index2.html">Depresión</a>
+        <a href="Index3.HTML">Juegos & Videos</a>
+        <a href="#tratamiento">Sobre Nosotros</a>
+    </nav>
+    
+    <div class="container">
+        <div id="inicio" class="content fade-in">
+            <h2>Bienvenido a nuestro espacio sobre ansiedad</h2>
+            <p>Aquí encontrarás información confiable y herramientas para manejar la ansiedad. Recuerda, no estás solo en este camino.</p>
+        </div>
+        
+        <div id="que-es" class="content fade-in">
+            <h2>¿Qué es la ansiedad?</h2>
+            <p>La ansiedad es una respuesta natural del cuerpo ante situaciones de estrés o peligro. Sin embargo, cuando esta respuesta se vuelve excesiva o persistente, puede interferir con la vida diaria.</p>
+        </div>
+        
+        <div id="sintomas" class="content fade-in">
+            <h2>Síntomas comúnes</h2>
+            <ul>
+                <li>Preocupación excesiva</li>
+                <li>Inquietud o sensación de agitación</li>
+                <li>Dificultad para concentrarse</li>
+                <li>Trastornos del sueño</li>
+                <li>Síntomas físicos como palpitaciones, sudoración o temblores</li>
+            </ul>
+        </div>
+        
+        <div id="tratamiento" class="content fade-in">
+            <h2>Tratamiento y manejo</h2>
+            <p>Existen varios enfoques para tratar la ansiedad:</p>
+            <ul>
+                <li>Terapia cognitivo-conductual</li>
+                <li>Técnicas de relajación y mindfulness</li>
+                <li>Ejercicio regular</li>
+                <li>Medicación (bajo supervisión médica)</li>
+                <li>Cambios en el estilo de vida</li>
+            </ul>
+        </div>
+        
+        <div id="ejercicio" class="content fade-in">
+            <h2>Ejercicio de respiración</h2>
+            <p>Practica esta técnica de respiración para calmar tu mente:</p>
+            <div class="breathing-exercise">
+                <div id="breathing-circle"></div>
+                <p id="breathing-instruction">Inhala profundamente...</p>
+                <button onclick="startBreathingExercise()">Iniciar ejercicio</button>
+            </div>
+
+            <div id="busca-ayuda" class="content fade-in">
+                <h2>Busca Ayuda</h2>
+                <p>Si necesitas ayuda profesional o más información, estos enlaces pueden ser útiles:</p>
+                <ul>
+                    <li><a href="https://search.app/KQ5PTeRhR5pR5fG26">Human Construction</a></li>
+                    <li><a href="https://search.app/mxXrfaYs1A9PtXc38">QUÉ PUEDO HACER SI ME SIENTO MAL EMOCIONALMENTE</a></li>
+                    <li><a href="https://www.minsalud.gov.co/salud/publica/SMental/Paginas/gestion-integrada-para-la-salud-mental.aspx">Gestión integrada para la salud mental</a></li>
+                </ul>
+                <p>Recuerda: buscar ayuda es un signo de fortaleza, no de debilidad.</p>
+            </div>
+
+        </div>
+
+        
+    </div>
+    
+
+    <script>
+        function startBreathingExercise() {
+            const circle = document.getElementById('breathing-circle');
+            const instruction = document.getElementById('breathing-instruction');
+            let isInhaling = true;
+
+            function breathe() {
+                if (isInhaling) {
+                    circle.style.transform = 'scale(1.5)';
+                    circle.style.backgroundColor = '#4682b4';
+                    instruction.textContent = 'Inhala profundamente...';
+                } else {
+                    circle.style.transform = 'scale(1)';
+                    circle.style.backgroundColor = '#5f9ea0';
+                    instruction.textContent = 'Exhala lentamente...';
+                }
+                isInhaling = !isInhaling;
+            }
+
+            breathe(); // Start immediately
+            setInterval(breathe, 4000); // Change every 4 seconds
+        }
+
+        // Cambiar color de fondo gradualmente
+        function changeBackgroundColor() {
+            const colors = ['#f0f8ff', '#e6e6fa', '#f0fff0', '#fff0f5'];
+            let index = 0;
+            setInterval(() => {
+                document.body.style.backgroundColor = colors[index];
+                index = (index + 1) % colors.length;
+            }, 10000);
+        }
+
+        changeBackgroundColor();
+
+        // Animación de aparición al hacer scroll
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver(handleIntersection);
+        document.querySelectorAll('.content').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

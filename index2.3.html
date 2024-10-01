@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déficit de Atención - Información y Ayuda</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #1cc88a;
+            --accent-color: #f6c23e;
+            --text-color: #2e2e2e;
+            --bg-color: #f8f9fc;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(78, 115, 223, 0.9);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu a:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .menu a:hover:before {
+            width: 100%;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(28, 200, 138, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(246, 194, 62, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header class="header">
+        <nav>
+            <ul class="menu">
+                <li><a href="Index1.html" class="slide-in">Inicio</a></li>
+                <li><a href="index2.1.html" class="slide-in">Trastornos Alimenticios</a></li>
+                <li><a href="index2.2.html" class="slide-in">Trastornos Bipolares</a></li>
+                <li><a href="index2.4.html" class="slide-in">Ansiedad</a></li>
+                <li><a href="Index2.html" class="slide-in">Depresión</a></li>
+                <li><a href="Index3.HTML" class="slide-in">Juegos & Videos</a></li>
+                <li><a href="SOBRENOSOTROS.HTML" class="slide-in">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="inicio" class="section">
+            <h1 class="pulse">Trastorno por Déficit de Atención e Hiperactividad (TDAH)</h1>
+            <p>El Trastorno por Déficit de Atención e Hiperactividad (TDAH) es una condición neuropsiquiátrica que afecta a niños y adultos. El TDAH puede causar dificultades en el control de la atención, hiperactividad e impulsividad. Aunque suele diagnosticarse en la infancia, también afecta a los adultos y puede impactar tanto en la vida personal como profesional.</p>
+        </section>
+
+        <section id="que-es" class="section">
+            <h2 class="floating">¿Qué es el TDAH?</h2>
+            <p>El TDAH se caracteriza por patrones persistentes de inatención, hiperactividad e impulsividad que interfieren en las actividades diarias. Es una de las afecciones más comunes en la infancia, pero también puede continuar en la vida adulta. Existen diferentes tipos de TDAH, y los síntomas pueden variar según la persona.</p>
+        </section>
+
+        <section id="sintomas" class="section">
+            <h2 class="floating">Síntomas Comunes del TDAH</h2>
+            <p>Los síntomas del TDAH pueden variar entre individuos, pero los más comunes incluyen:</p>
+            <ul>
+                <li class="slide-in">Dificultad para concentrarse o mantener la atención</li>
+                <li class="slide-in">Comportamiento impulsivo</li>
+                <li class="slide-in">Hiperactividad excesiva</li>
+                <li class="slide-in">Dificultad para organizar tareas o actividades</li>
+            </ul>
+        </section>
+
+        <section id="tratamientos" class="section">
+            <h2 class="floating">Tratamientos Disponibles</h2>
+            <p>Existen diversas opciones para tratar el TDAH, que incluyen:</p>
+            <ul>
+                <li class="slide-in">Terapia Cognitivo Conductual (TCC)</li>
+                <li class="slide-in">Medicación (como estimulantes y no estimulantes)</li>
+                <li class="slide-in">Intervenciones educativas</li>
+                <li class="slide-in">Terapia conductual</li>
+            </ul>
+        </section>
+
+       
+        <section id="ayuda" class="section">
+            <h2 class="floating">Busca Ayuda</h2>
+            <p>Si tú o alguien que conoces está luchando con un trastorno bipolar, es importante buscar ayuda profesional. Aquí tienes algunos recursos útiles:</p>
+            <ul>
+                <li class="slide-in"><a href="https://search.app/KQ5PTeRhR5pR5fG26" target="_blank">Human Construction</a></li>
+                <li class="slide-in"><a href="https://www.minsalud.gov.co/salud/publica/SMental/Paginas/gestion-integrada-para-la-salud-mental.aspx" target="_blank">Gestión integrada para la salud mental</a></li>
+                <li class="slide-in"><a href="https://search.app/mxXrfaYs1A9PtXc38" target="_blank">¿QUÉ PUEDO HACER SI
+                    ME SIENTO MAL
+                    EMOCIONALMENTE</a></li>
+
+            </ul>
+            <p>Recuerda, buscar ayuda es un signo de fortaleza, no de debilidad. Un profesional de la salud mental puede proporcionar el diagnóstico y tratamiento adecuados. <br> Telefono Psicológa: +57 312 3252910</p>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Configuración de particles.js
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#4e73df" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 5, random: true },
+                line_linked: { enable: true, distance: 150, color: "#4e73df", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Mostrar elementos cuando son visibles al hacer scroll
+        window.addEventListener("scroll", function() {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

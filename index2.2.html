@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trastornos Bipolares - Información y Ayuda</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --accent-color: #feca57;
+            --text-color: #2d3436;
+            --bg-color: #f7f1e3;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 107, 107, 0.9);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu a:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .menu a:hover:before {
+            width: 100%;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(254, 202, 87, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header class="header">
+        <nav>
+            <ul class="menu">
+                <li><a href="Index1.html" class="slide-in">Inicio</a></li>
+                <li><a href="index2.1.html" class="slide-in">Trastornos Alimenticios</a></li>
+                <li><a href="index2.3.html" class="slide-in">Déficit de Atención</a></li>
+                <li><a href="index2.4.html" class="slide-in">Ansiedad</a></li>
+                <li><a href="Index2.html" class="slide-in">Depresión</a></li>
+                <li><a href="Index3.HTML" class="slide-in">Juegos & Videos</a></li>
+                <li><a href="SOBRENOSOTROS.HTML" class="slide-in">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="inicio" class="section">
+            <h1 class="pulse">Trastornos Bipolares</h1>
+            <p>El trastorno bipolar es una enfermedad mental caracterizada por cambios extremos en el estado de ánimo. Las personas con trastorno bipolar experimentan episodios de manía o hipomanía (euforia, hiperactividad) y episodios de depresión (tristeza profunda, falta de energía). Estos cambios pueden ser intensos y afectar la capacidad para llevar a cabo las actividades cotidianas. <br> El trastorno bipolar es una enfermedad grave que, sin tratamiento adecuado, puede alterar la vida de una persona, pero con el apoyo adecuado es posible llevar una vida plena y productiva.</p>
+        </section>
+
+        <section id="tipos" class="section">
+            <h2 class="floating">Tipos de Trastornos Bipolares</h2>
+            <ul>
+                <li class="slide-in">Trastorno Bipolar I: Se caracteriza por episodios maníacos que duran al menos siete días, o por episodios maníacos tan graves que requieren hospitalización inmediata. Generalmente, también hay episodios depresivos.</li>
+                <br>
+                <li class="slide-in">Trastorno Bipolar II: Se caracteriza por un patrón de episodios depresivos e hipomaníacos (menos graves que la manía), pero sin episodios maníacos completos.</li>
+                <br>
+                <li class="slide-in">Trastorno Ciclotímico: Consiste en episodios de síntomas hipomaníacos y depresivos que no cumplen con los criterios de diagnóstico para la manía o la depresión mayor, pero son persistentes a lo largo del tiempo.</li>
+                <br>
+                <li class="slide-in">Otros Trastornos Relacionados: Incluyen casos de trastornos bipolares inducidos por medicamentos o sustancias, así como otras condiciones médicas.</li>
+            </ul>
+        </section>
+
+        <section id="sintomas" class="section">
+            <h2 class="floating">Síntomas Comunes</h2>
+            <p>Los síntomas varían según el tipo de episodio, pero pueden incluir:</p>
+            <ul>
+                <li class="slide-in">Manía: Euforia, irritabilidad, poca necesidad de dormir, habla rápida, comportamiento arriesgado.</li>
+                <li class="slide-in">Depresión: Tristeza, fatiga, pérdida de interés, dificultades para concentrarse, pensamientos de muerte o suicidio.</li>
+                <li class="slide-in">Cambios rápidos entre estos estados (episodios mixtos).</li>
+            </ul>
+        </section>
+        
+        
+        <section id="ayuda" class="section">
+            <h2 class="floating">Busca Ayuda</h2>
+            <p>Si tú o alguien que conoces está luchando con un trastorno bipolar, es importante buscar ayuda profesional. Aquí tienes algunos recursos útiles:</p>
+            <ul>
+                <li class="slide-in"><a href="https://search.app/KQ5PTeRhR5pR5fG26" target="_blank">Human Construction</a></li>
+                <li class="slide-in"><a href="https://www.minsalud.gov.co/salud/publica/SMental/Paginas/gestion-integrada-para-la-salud-mental.aspx" target="_blank">Gestión integrada para la salud mental</a></li>
+                <li class="slide-in"><a href="https://search.app/mxXrfaYs1A9PtXc38" target="_blank">¿QUÉ PUEDO HACER SI
+                    ME SIENTO MAL
+                    EMOCIONALMENTE</a></li>
+
+            </ul>
+            <p>Recuerda, buscar ayuda es un signo de fortaleza, no de debilidad. Un profesional de la salud mental puede proporcionar el diagnóstico y tratamiento adecuados. <br> Telefono Psicológa: +57 312 3252910</p>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Configuración de particles.js
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ff6b6b" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 5, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ff6b6b", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2 }
+            }
+        });
+
+        // Añadir clase 'visible' cuando los elementos aparecen en el viewport
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Cambiar tamaño de header al hacer scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

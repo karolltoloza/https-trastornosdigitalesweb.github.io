@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trastornos Alimenticios - Información y Ayuda</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #2b658b;
+            --secondary-color: #4ecdc4;
+            --accent-color: #feca57;
+            --text-color: #2d3436;
+            --bg-color: #f7f1e3;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(33, 53, 111, 0.9);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu a:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .menu a:hover:before {
+            width: 100%;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(254, 202, 87, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header class="header">
+        <nav>
+            <ul class="menu">
+                <li><a href="Index1.html" class="slide-in">Inicio</a></li>
+                <li><a href="index2.2.html" class="slide-in">Trastornos Bipolares</a></li>
+                <li><a href="index2.3.html" class="slide-in">Déficit de Atención</a></li>
+                <li><a href="index2.4.html" class="slide-in">Ansiedad</a></li>
+                <li><a href="Index2.html" class="slide-in">Depresión</a></li>
+                <li><a href="Index3.html" class="slide-in">Juegos & Videos</a></li>
+                <li><a href="SOBRENOSOTROS.html" class="slide-in">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="inicio" class="section">
+            <h1 class="pulse">Trastornos Alimenticios</h1>
+            <p>Los trastornos alimentarios son enfermedades graves que afectan tanto la salud física como la mental. Estas afecciones incluyen problemas en la forma de pensar sobre la comida, la alimentación, el peso y la figura, así como en los comportamientos alimentarios. Estos síntomas pueden afectar tu salud, tus emociones y tu capacidad para desenvolverte en ámbitos importantes de la vida. <br> Si no se tratan de manera eficaz, los trastornos alimentarios pueden convertirse en problemas crónicos y, en algunos casos, pueden causar la muerte. Los trastornos alimentarios más frecuentes son la anorexia, la bulimia y el trastorno por atracón.</p>
+        </section>
+
+        <section id="tipos" class="section">
+            <h2 class="floating">Tipos de Trastornos Alimenticios</h2>
+            <ul>
+                <li class="slide-in">Anorexia Nerviosa: La anorexia, o anorexia nerviosa, puede ser un trastorno alimentario mortal. Consiste en un bajo peso corporal poco saludable, miedo excesivo a aumentar de peso y una impresión engañosa del peso y la figura corporal.</li>
+                <br>
+                <li class="slide-in">Bulimia Nerviosa: La bulimia, también llamada bulimia nerviosa, es un trastorno alimentario grave que a veces pone en riesgo la vida. La bulimia incluye episodios de atracones, comúnmente seguidos de episodios de purgas. A veces, la bulimia también incluye comer de manera muy limitada durante un tiempo.</li>
+                <br>
+                <li class="slide-in">Trastorno por Atracón: El trastorno por atracón consiste en ingerir alimentos en un lapso corto de tiempo. Al comer compulsivamente, se tiene la sensación de no tener control sobre la comida, pero después de un atracón no se produce una purga.</li>
+                <br>
+                <li class="slide-in">Trastorno por evitación o restricción de la ingesta de alimentos: Este trastorno incluye comer de forma extremadamente limitada o no comer determinados alimentos. El patrón de alimentación a menudo no satisface las necesidades nutricionales diarias mínimas. Esto puede llevar a problemas de crecimiento, desarrollo y funcionamiento en la vida diaria.</li>
+            </ul>
+        </section>
+
+        <section id="complicaciones" class="section">
+            <h2 class="floating">Complicaciones</h2>
+            <p>Los trastornos alimentarios causan complicaciones muy variadas, algunas de las cuales ponen en riesgo la vida. Cuanto mayor es la gravedad del trastorno o cuanto más perdura, más probable es que se presenten complicaciones graves. Estas pueden ser algunas de ellas:</p>
+            <ul>
+                <li class="slide-in">Problemas de salud graves</li>
+                <li class="slide-in">Depresión y ansiedad</li>
+                <li class="slide-in">Pensamientos y conductas suicidas</li>
+                <li class="slide-in">Problemas con el crecimiento y el desarrollo</li>
+                <li class="slide-in">Problemas sociales y en las relaciones</li>
+                <li class="slide-in">Trastornos por consumo de sustancias adictivas</li>
+                <li class="slide-in">Muerte</li>
+            </ul>
+        </section>
+
+        <section id="sintomas" class="section">
+            <h2 class="floating">Síntomas Comunes</h2>
+            <p>Los síntomas varían según el trastorno, pero pueden incluir:</p>
+            <ul>
+                <li class="slide-in">Preocupación excesiva por el peso y la forma corporal</li>
+                <li class="slide-in">Restricción severa de la ingesta de alimentos</li>
+                <li class="slide-in">Atracones seguidos de purgas</li>
+            </ul>
+        </section>
+
+        <section id="ayuda" class="section">
+            <h2 class="floating">Busca Ayuda</h2>
+            <p>Si tú o alguien que conoces está luchando con un trastorno bipolar, es importante buscar ayuda profesional. Aquí tienes algunos recursos útiles:</p>
+            <ul>
+                <li class="slide-in"><a href="https://search.app/KQ5PTeRhR5pR5fG26" target="_blank">Human Construction</a></li>
+                <li class="slide-in"><a href="https://www.minsalud.gov.co/salud/publica/SMental/Paginas/gestion-integrada-para-la-salud-mental.aspx" target="_blank">Gestión integrada para la salud mental</a></li>
+                <li class="slide-in"><a href="https://search.app/mxXrfaYs1A9PtXc38" target="_blank">¿QUÉ PUEDO HACER SI
+                    ME SIENTO MAL
+                    EMOCIONALMENTE</a></li>
+
+            </ul>
+            <p>Recuerda, buscar ayuda es un signo de fortaleza, no de debilidad. Un profesional de la salud mental puede proporcionar el diagnóstico y tratamiento adecuados. <br> Telefono Psicológa: +57 312 3252910</p>
+        </section>
+    </div>
+</body>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Configuración de particles.js
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ff6b6b" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ff6b6b", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Animación del menú al hacer scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Animación de las secciones al hacer scroll
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const listItems = entry.target.querySelectorAll('li');
+                    listItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateX(0)';
+                        }, index * 200);
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Animación del botón CTA
+        const ctaButton = document.querySelector('.cta-button');
+        ctaButton.addEventListener('mouseover', () => {
+            ctaButton.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+        ctaButton.addEventListener('mouseout', () => {
+            ctaButton.style.transform = 'scale(1) rotate(0deg)';
+        });
+
+        // Animación de fade-in para elementos del menú
+        const menuItems = document.querySelectorAll('.menu a');
+        menuItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            setTimeout(() => {
+                item.classList.add('fade-in');
+                item.style.opacity = '1';
+            }, index * 200);
+        });
+    </script>
+</body>
+</html>
